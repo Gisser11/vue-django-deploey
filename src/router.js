@@ -18,6 +18,10 @@ const routes = [
     {
         path: '/CRUD/:id/edit',
         component: refPage
+    },
+    {
+        path: '/CRUD/memes',
+        component: 
     }
 ]
 
