@@ -10,15 +10,17 @@
           <v-btn class="w-full mb-3" @click="showDialog">Авторизация</v-btn>
           <v-btn class="w-full" @click="logout">Выход из профиля</v-btn>
         </div>
-        <p class="text-lg text-gray-300">Переход на страницу с анекдотами</p>
+        <router-link to="/memes/">
+          <p class="text-lg text-gray-300">Переход на страницу с анекдотами</p>
+        </router-link>
         <!-- #TODO страница в формате тиктока -->
       </div>
       <div class="p-2 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-gray-700 hover:bg-blue-200 text-white">
         <slot></slot>
       </div>
 
-      <div class="p-2 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-black hover:bg-blue-200 text-white">
-        <button @click="getPosts">Получить посты</button>
+      <div @click="getPosts" class="p-2 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-black hover:bg-blue-200 text-white">
+        <button >Получить посты</button>
         <!-- #TODO само собой анлогин, но прежде реализовать логин -->
       </div>
     </div>

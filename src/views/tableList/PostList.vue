@@ -2,7 +2,7 @@
   <div class="w-full">
     <h1 class="text-3xl text-gray-800 text-center">Список постов</h1>
     <div class="flex justify-center items-center">
-      <div>
+      <div v-if="posts.length > 0">
         <table class="w-full list">
           <thead>
           <tr>
@@ -31,26 +31,19 @@
           </transition-group>
         </table>
       </div>
-      <!--      <div v-else class="flex justify-center items-center">-->
-      <!--        <h1 class="text-xl text-gray-800">-->
-      <!--          Здесь нет постов...-->
-      <!--        </h1>-->
-      <!--        <img-->
-      <!--            class="w-8 mr-2 h-8"-->
-      <!--            src="https://em-content.zobj.net/thumbs/72/apple/354/pleading-face_1f97a.png"-->
-      <!--            alt="грустный смайлик"-->
-      <!--        />-->
-      <!--        <img-->
-      <!--            class="w-8 mr-2 h-8"-->
-      <!--            src="https://em-content.zobj.net/thumbs/72/apple/354/pleading-face_1f97a.png"-->
-      <!--            alt="грустный смайлик"-->
-      <!--        />-->
-      <!--        <img-->
-      <!--            class="w-8 mr-2 h-8"-->
-      <!--            src="https://em-content.zobj.net/thumbs/72/apple/354/pleading-face_1f97a.png"-->
-      <!--            alt="грустный смайлик"-->
-      <!--        />-->
-      <!--      </div>-->
+      <div v-else class="flex flex-col items-center justify-center">
+        <h1 class="text-xl text-gray-800">
+          Здесь нет постов...
+        </h1>
+
+        <div class="rounded-xl ml-[20%] mr-[20%] bg-blue-400 max-w-max">
+          <p class="font-medium  m-2 text-blue-50 ">
+            Возможная проблема: вы не авторизовались. Для входа нажмите "авторизация" и введите log:pass admin:admin,
+            затем черную кнопку получить посты
+          </p>
+        </div>
+      </div>
+
     </div>
   </div>
 </template>
