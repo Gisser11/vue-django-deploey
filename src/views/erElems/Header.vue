@@ -10,7 +10,7 @@
           <v-btn class="w-full mb-3" @click="showDialog">Авторизация</v-btn>
           <v-btn class="w-full" @click="logout">Выход из профиля</v-btn>
         </div>
-        <router-link to="/memes/">
+        <router-link to="/CRUD/memes/">
           <p class="text-lg text-gray-300">Переход на страницу с анекдотами</p>
         </router-link>
         <!-- #TODO страница в формате тиктока -->

@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import mainPage from "@/views/mainPage.vue";
 import UserApp from "@/views/UserApp.vue";
+import memes from "@/views/memes.vue";
 import refPage from "@/views/tableList/refPage.vue";
 Vue.use(VueRouter)
 
@@ -21,7 +22,7 @@ const routes = [
     },
     {
         path: '/CRUD/memes',
-        component: 
+        component: memes
     }
 ]
 
